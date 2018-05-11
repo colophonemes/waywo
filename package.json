@@ -1,0 +1,41 @@
+{
+  "name": "waywo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./lib/index",
+    "build": "tsc && cp ./src/*.json ./lib",
+    "build:live": "nodemon --exec yarn -- run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colophonemes/waywo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colophonemes/waywo/issues"
+  },
+  "homepage": "https://github.com/colophonemes/waywo#readme",
+  "devDependencies": {
+    "@types/node": "^10.0.8",
+    "nodemon": "^1.17.4",
+    "ts-node": "^6.0.3",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "@types/twilio": "^0.0.9",
+    "twilio": "^3.16.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "lib/*",
+      "test/*",
+      "docs/*"
+    ],
+    "ext": "ts,json"
+  }
+}
